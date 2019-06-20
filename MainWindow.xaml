@@ -1,0 +1,17 @@
+﻿<Window x:Name="asav" x:Class="asav.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:asav"
+        mc:Ignorable="d"
+        Title="asav" Height="312" Width="258" Closing="Window_Close" ResizeMode="CanMinimize">
+    <Grid>
+        <Label x:Name="actionHintLabel" Content="Keine Datenbank geladen!&#xD;&#xA;" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Width="246" HorizontalContentAlignment="Center" FontWeight="Bold" Height="26"/>
+        <Label Content="Was möchten Sie tun?" Height="28" VerticalAlignment="Top" Margin="60,126,60,0" HorizontalAlignment="Center"/>
+        <Button x:Name="activityButton" Content="Aktivität eintragen&#xD;&#xA;" Height="24" VerticalAlignment="Top" Margin="60,164,60,0" IsEnabled="False" Click="ActivityButton_Click"/>
+        <Button x:Name="mintecButton" Content="MINT-EC auswerten&#xD;&#xA;" Height="24"  VerticalAlignment="Top"  Margin="60,194,60,0" IsEnabled="False" Click="MintecButton_Click"/>
+        <Button Content="Datenbank laden" Margin="60,78,60,0" VerticalAlignment="Top" Click="Button_Click" Height="24"/>
+        
+    </Grid>
+</Window>
