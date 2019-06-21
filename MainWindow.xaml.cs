@@ -29,9 +29,16 @@ namespace asav
             InitializeComponent();
         }
 
+        /*
+         * Mit der Access-Datenbank in path verbinden und testen, dass die Verbindung funktioniert.
+         * Wirft eine OleDbException bei Fehler.
+         * */
         private OleDbConnection ConnectDatabase(string path)
         {
-            return new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path);
+            OleDbConnection c = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path);
+            c.Open();
+            c.Close();
+            return c;
         }
 
         private void DisconnectDatabase(OleDbConnection conn)
@@ -47,11 +54,17 @@ namespace asav
             OpenFileDialog file = new OpenFileDialog();
             if (file.ShowDialog() == true)
             {
-                conn = ConnectDatabase(file.FileName);
-                activityButton.IsEnabled = true;
-                mintecButton.IsEnabled = true;
-                actionHintLabel.Content = "Datenbank geladen!";
-                actionHintLabel.FontWeight = FontWeights.Normal;
+                try
+                {
+                    conn = ConnectDatabase(file.FileName);
+                    activityButton.IsEnabled = true;
+                    mintecButton.IsEnabled = true;
+                    actionHintLabel.Content = "Datenbank geladen!";
+                    actionHintLabel.FontWeight = FontWeights.Normal;
+                } catch (OleDbException e)
+                {
+                    MessageBox.Show("Konnte die Datenbank nicht laden: \n" + e.Message, "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
 
         }
