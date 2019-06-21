@@ -68,7 +68,10 @@ namespace asav
 
         private void ActivityButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("ActivityButton_Click stub");
+            AktivitaetEintragenWindow window = new AktivitaetEintragenWindow(conn);
+            this.IsEnabled = false;
+            window.ShowDialog();
+            this.IsEnabled = true;
         }
 
         private void MintecButton_Click(object sender, RoutedEventArgs e)

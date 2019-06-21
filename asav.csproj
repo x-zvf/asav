@@ -55,11 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AktivitaetEintragenWindow.xaml.cs">
+      <DependentUpon>AktivitaetEintragenWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="schuelerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>schuelerDataSet.xsd</DependentUpon>
     </Compile>
+    <Page Include="AktivitaetEintragenWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
