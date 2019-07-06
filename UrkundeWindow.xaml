@@ -11,7 +11,6 @@
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <Rectangle Fill="{Binding schuljahr}" Height="16" Margin="0,2,5,2" />
                         <TextBlock Text="{Binding schuljahr}" />
                     </StackPanel>
                 </DataTemplate>
