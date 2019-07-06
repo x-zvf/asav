@@ -12,6 +12,7 @@
         <Button x:Name="activityButton" Content="Aktivität eintragen&#xD;&#xA;" Height="24" VerticalAlignment="Top" Margin="60,164,60,0" IsEnabled="False" Click="ActivityButton_Click"/>
         <Button x:Name="mintecButton" Content="MINT-EC auswerten&#xD;&#xA;" Height="24"  VerticalAlignment="Top"  Margin="60,194,60,0" IsEnabled="False" Click="MintecButton_Click"/>
         <Button Content="Datenbank laden" Margin="60,78,60,0" VerticalAlignment="Top" Click="Button_Click" Height="24"/>
-        
+        <Button x:Name="urkunde_button" Content="Urkunde drucken&#xD;&#xA;" Height="24"  VerticalAlignment="Top"  Margin="60,223,60,0" IsEnabled="False" Click="UrkundeButton_Click"/>
+
     </Grid>
 </Window>
