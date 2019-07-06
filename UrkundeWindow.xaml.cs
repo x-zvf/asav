@@ -33,5 +33,16 @@ namespace asav
         {
 
         }
+
+        private void AlleSchuljahre_Checked(object sender, RoutedEventArgs e)
+        {
+            schuljahrComboBox.IsEnabled = false;
+            
+        }
+
+        private void AlleSchuljahre_Unchecked(object sender, RoutedEventArgs e)
+        {
+            schuljahrComboBox.IsEnabled = true;
+        }
     }
 }
