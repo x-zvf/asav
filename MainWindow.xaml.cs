@@ -52,6 +52,7 @@ namespace asav
         private void LoadDatabase()
         {
             OpenFileDialog file = new OpenFileDialog();
+            file.Filter = "Datenbanken (*.accdb)|*.accdb|All files (*.*)|*.*";
             if (file.ShowDialog() == true)
             {
                 try
