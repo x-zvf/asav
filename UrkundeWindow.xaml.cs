@@ -11,6 +11,7 @@ namespace asav
     {
 
         private OleDbConnection conn;
+        private string selectedSchuljahr;
 
         public UrkundeWindow(OleDbConnection conn)
         {
@@ -21,7 +22,7 @@ namespace asav
             OleDbDataAdapter adap = new OleDbDataAdapter(command);
             schuelerDataSet.mschuljahrDataTable table = new schuelerDataSet.mschuljahrDataTable();
             adap.Fill(table);
-            schuljahrComboBox.ItemsSource = table;
+            schuljahrComboBox.ItemsSource = table.Rows;
         }
 
         private void ListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -31,7 +32,7 @@ namespace asav
 
         private void SchuljahrComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-
+            selectedSchuljahr = ((dynamic)(schuljahrComboBox)).SelectedItem.schuljahr;
         }
 
         private void AlleSchuljahre_Checked(object sender, RoutedEventArgs e)
