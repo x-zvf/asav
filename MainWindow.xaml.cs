@@ -59,6 +59,7 @@ namespace asav
                     conn = ConnectDatabase(file.FileName);
                     activityButton.IsEnabled = true;
                     mintecButton.IsEnabled = true;
+                    urkunde_button.IsEnabled = true;
                     actionHintLabel.Content = "Datenbank geladen!";
                     actionHintLabel.FontWeight = FontWeights.Normal;
                 } catch (OleDbException e)
@@ -90,6 +91,14 @@ namespace asav
         private void MintecButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("ActivityButton_Click stub");
+        }
+
+        private void UrkundeButton_Click(object sender, RoutedEventArgs e)
+        {
+            UrkundeWindow window = new UrkundeWindow(conn);
+            this.IsEnabled = false;
+            window.ShowDialog();
+            this.IsEnabled = true;
         }
     }
 }

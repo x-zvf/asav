@@ -1,0 +1,22 @@
+﻿<Window x:Class="asav.UrkundeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:asav"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="schuljahrComboBox" HorizontalAlignment="Left" Margin="32,28,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="SchuljahrComboBox_SelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding schuljahr}" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding schuljahr}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+    </Grid>
+</Window>
