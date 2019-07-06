@@ -6,17 +6,17 @@
         xmlns:local="clr-namespace:asav"
         mc:Ignorable="d"
         Title="Urkundengenerator" Height="450" Width="800">
-  <Grid>
-    <ComboBox x:Name="schuljahrComboBox" HorizontalAlignment="Left" Margin="32,28,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="SchuljahrComboBox_SelectionChanged">
-      <ComboBox.ItemTemplate>
-        <DataTemplate>
-          <StackPanel Orientation="Horizontal">
-            <TextBlock Text="{Binding schuljahr}" />
-          </StackPanel>
-        </DataTemplate>
-      </ComboBox.ItemTemplate>
-    </ComboBox>
-    <CheckBox Name="AlleSchuljahre_Checkbox" Content="Alle Schuljahre" HorizontalAlignment="Left" Height="22" Margin="92,46,0,0" VerticalAlignment="Top" Width="120" Checked="AlleSchuljahre_Checked" Unchecked="AlleSchuljahre_Unchecked" />
-    <Label Content="Für welche Schuljahre?" HorizontalAlignment="Left" Height="31" Margin="92,10,0,0" VerticalAlignment="Top" Width="135"/>
-  </Grid>
+    <Grid>
+        <ComboBox x:Name="schuljahrComboBox" HorizontalAlignment="Left" Margin="29,100,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="SchuljahrComboBox_SelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding schuljahr}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <CheckBox Name="AlleSchuljahre_Checkbox" Content="Alle Schuljahre" HorizontalAlignment="Left" Height="22" Margin="29,73,0,0" VerticalAlignment="Top" Width="120" Checked="AlleSchuljahre_Checked" Unchecked="AlleSchuljahre_Unchecked" />
+        <Label Content="Für welche Schuljahre?" HorizontalAlignment="Left" Height="31" Margin="29,26,0,0" VerticalAlignment="Top" Width="135"/>
+    </Grid>
 </Window>
